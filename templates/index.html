@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#708090]">
+    <form action="/" method="post" class="flex flex-col items-center w-full">
+      <img
+        src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png"
+        alt="Say Hi"
+        class="w-48 mt-28"
+      />
+      <p class="text-[#fff] py-5">
+        {% if not name %} What's your name? {% else %} Hii {{name}}, great to
+        see you {% endif %}
+      </p>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="w-72 h-8 rounded text-center"
+      />
+      <button
+        type="submit"
+        class="bg-[#50DBB4] text-[#000] my-5 py-2 px-12 rounded hover:bg-[#1C8D73] hover:text-[#fff]"
+      >
+        Greet
+      </button>
+    </form>
+  </body>
+</html>
